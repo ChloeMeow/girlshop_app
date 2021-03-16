@@ -1,0 +1,27 @@
+{
+    "name": "node_shop_server",
+    "version": "0.0.1",
+    "description": "Flutter女装商城服务端",
+    "scripts": {
+        "start": "nodemon app.js",
+        "test": "mocha -r intelli-espower-loader -t 20000 test",
+        "precommit": "Lint-staged"
+    },
+    "lint-staged": {
+        "*.js": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "Keywords": [
+        "node",
+        "shop"
+    ],
+    "author": "Kevin kang",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.16.3",
+        "nodemon": "^2.0.7",
+        "request": "^2.85.0"
+    }
+}
