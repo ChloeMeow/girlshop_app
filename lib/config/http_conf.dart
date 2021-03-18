@@ -1,4 +1,4 @@
-const base_url = 'http://192.168.0.1:8080';
+const base_url = 'http://192.168.50.101:3000/';
 //安卓模拟器建议改为192.168把它写死，否则出现连续不上的情况
 const servicePath = {
   'homePageContent': base_url + 'getHomePageContent', //首页数据
