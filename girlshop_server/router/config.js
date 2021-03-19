@@ -1,6 +1,6 @@
 const config = {
-    IP:'192.168.0.1',
-    PORT:'8080',
+    IP:'192.168.50.101',
+    PORT:'3000',
 };
 
 module.exports = config;

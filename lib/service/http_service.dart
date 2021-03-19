@@ -21,6 +21,7 @@ Future request(url, {formData}) async {
       throw Exception("后端接口异常，请检查测试代码和服务器运行情况……");
     }
   } catch (e) {
+    // throw Exception("后端接口异常，请检查测试代码和服务器运行情况……");
     return print('error:::${e}');
   }
 }
