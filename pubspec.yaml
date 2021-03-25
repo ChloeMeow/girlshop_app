@@ -28,6 +28,7 @@ dependencies:
   flutter_swiper:
   url_launcher: 
   flutter_screenutil:
+  flutter_easyrefresh:
   provider:
   fluttertoast:
   fluro:

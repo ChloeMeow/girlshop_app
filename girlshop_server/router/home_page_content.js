@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express();
 const config = require('./config');
-const base_url = "http://" + config.IP + ":" + config.PORT + "images/";
-const category_url = "http://" + config.IP + ":" + config.PORT + "images/category";
+const base_url = "http://" + config.IP + ":" + config.PORT + "/images/";
+const category_url = "http://" + config.IP + ":" + config.PORT + "/images/category/";
 router.post("/",(req, res) =>{
 
     var data = {
@@ -11,19 +11,19 @@ router.post("/",(req, res) =>{
         "data":{
            //banner轮播图片
            "slides":[{
-               "images": base_url + "banner/01.png",
+               "image": base_url + "banner/01.png",
                "goodsId": "001"
            }, 
            {
-            "images": base_url + "banner/02.png",
+            "image": base_url + "banner/02.png",
             "goodsId": "002"
            },
            {
-            "images": base_url + "banner/03.png",
+            "image": base_url + "banner/03.png",
             "goodsId": "003"
            },
            {
-            "images": base_url + "banner/04.png",
+            "image": base_url + "banner/04.png",
             "goodsId": "004"
            },
            ],
@@ -31,49 +31,49 @@ router.post("/",(req, res) =>{
            "recommend":[
                {
                     "name":"法国代购新款江疏影同款翻领修身中长裙春夏印花连衣裙",
-                    "image": base_url +"goods/1/002.jpg",
+                    "image": base_url +"goods/1/001.jpg",
                     "presentPrice": 98.88,
                     "goodsId":"001",
                     "oriPrice": 108.883,
                 },{
                    "name":"柔美而精致~高贵而优雅~圆领金银丝春季毛衣羊毛开衫女短款白外套",
-                   "image": base_url +"goods/8/004.jpg",
+                   "image": base_url +"goods/8/001.jpg",
                    "presentPrice": 229.90,
                    "goodsId":"002",
                    "oriPrice": 320.99
                 },{
                     "name":"明星同款高端西服2019春装新款韩版英伦风短款格子小西装女外套潮",
                     "image": base_url +"goods/3/001.jpg",
-                    "presentprice": 318.88,
+                    "presentPrice": 318.88,
                     "goodsId":"003",
                     "oriPrice": 388.88
                 },{
                     "name":"复古酮形机车进口編羊波衣真皮外器女E142",
-                    "inage": base_url +"goods/4/003.jpg",
-                    "presentprite": 238.99,
+                    "image": base_url +"goods/4/001.jpg",
+                    "presentPrice": 238.99,
                     "goodsId":"004",
                     "oriPrice": 248.99
                 },{
                     "name":"单排扣高發牛仔裤女春夏駕秋紧身弹力小脚拂組瘦百播网虹漫色长裤",
-                    "image": base_url +"goods/5/001.jpg",
+                    "image": base_url +"goods/5/002.jpg",
                     "presentPrice": 588.99,
                     "goodsId":"005",
                     "oriPrice": 888.88,
                 },{
                     "name":"MIUCO女装夏季重工星星捷钻圖领短抽宽松显瘦百播T性上衣",
-                    "image": base_url +"goods/6/002.jpg",
+                    "image": base_url +"goods/6/001.jpg",
                     "presentPrice": 1028.88,
                     "goodsId":"006",
                     "oriPrice": 1888.88,
                 },{
                     "name":"春夏一步裙包臀裙开叉弹力修身显瘦短裙黑色高腰职业半身裙",
-                    "image": base_url +"goods/6/003.jpg",
-                    "presentPrice": 5328.88,
+                    "image": base_url +"goods/7/003.jpg",
+                    "presentPrice": 128.88,
                     "goodsId":"007",
-                    "oriPrice": 2388.88,
+                    "oriPrice": 88.88,
                 },{
                     "name":"夏季新款短袖圆领紧身小黑超短裙开叉包臀性感连衣裙夜店女装",
-                    "image": base_url +"goods/8/003.jpg",
+                    "image": base_url +"goods/8/001.jpg",
                     "presentPrice": 928.88,
                     "goodsId":"008",
                     "oriPrice": 688.88,
@@ -87,25 +87,25 @@ router.post("/",(req, res) =>{
            },
 
            //商品推荐底部
-           "floor":[
+           "floor1":[
                {
-                   "images": base_url + "floor/001.png",
+                   "image": base_url + "floor/001.png",
                    "goodsId":"001"
                },{
 
-                   "images": base_url + "floor/002.png",
+                   "image": base_url + "floor/002.png",
                    "goodsId":"002"
                },{
 
-                    "images": base_url + "floor/003.png",
+                    "image": base_url + "floor/003.png",
                     "goodsId":"003"
                 },{
 
-                    "images": base_url + "floor/004.png",
+                    "image": base_url + "floor/004.png",
                     "goodsId":"004"
                 },{
 
-                    "images": base_url + "floor/005.png",
+                    "image": base_url + "floor/005.png",
                     "goodsId":"005"
                 },
             ],
@@ -157,7 +157,7 @@ router.post("/",(req, res) =>{
                         "comments":""
                     }],
                     "comments":null,
-                    "Image": category_url + "3.png"
+                    "image": category_url + "3.png"
                 },
                 {
                     "firstCategoryId":"4",
@@ -175,7 +175,7 @@ router.post("/",(req, res) =>{
                     },
                 ],
                     "comments":null,
-                    "Image": category_url + "4.png"
+                    "image": category_url + "4.png"
                 },
                 {
                     "firstCategoryId":"5",
@@ -250,7 +250,7 @@ router.post("/",(req, res) =>{
             },
             {
                 "firstCategoryId":"9",
-                "secondCategoryName":"礼服",
+                "firstCategoryName":"礼服",
                 "secqndCategoryV0":[{
                     "secondCategoryId":"91",
                     "firstCategoryId":"9",
@@ -268,7 +268,7 @@ router.post("/",(req, res) =>{
             },
             {
                 "firstCategoryId":"10",
-                "secondCategoryName":"风衣",
+                "firstCategoryName":"风衣",
                 "secondCategoryV0":[{
                     "secondCategoryId":"101",
                     "firstCategoryId":"10",
