@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+// 引入config配置
+const config = require('./router/config.js');
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
@@ -17,10 +19,11 @@ app.use("/getTestData",require("./router/test"));
 app.use("/getHomePageContent",require("./router/home_page_content"));
 app.use("/getHotGoods",require("./router/hotgoods"));
 
-const port = process.env.PORT || 3000;
+// 使用config中的配置端口
+const port = config.PORT || 8080;
 
 app.listen(port,()=>{
-    console.log(`server running (http://localhost:${port})`);
+    console.log(`服务运行在 ${port} 端口`);
 });
 module.exports = app;
 
